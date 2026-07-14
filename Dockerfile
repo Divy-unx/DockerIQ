@@ -10,4 +10,4 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8081
 
-ENTRYPOINT ["java","-jar","target/hello-docker-java-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","target/dockeriq-0.0.1-SNAPSHOT.jar"]

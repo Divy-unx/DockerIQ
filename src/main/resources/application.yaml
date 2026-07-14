@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hello-docker-java
+    name: dockeriq
 
 server:
   port: 8081
