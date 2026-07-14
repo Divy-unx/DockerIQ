@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: hello-docker-java
+
+server:
+  port: 8081
