@@ -1,4 +1,4 @@
-package com.divyanshu.hello_docker_java;
+package com.divyanshu.dockeriq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
