@@ -5,17 +5,20 @@ import java.util.List;
 public class AnalysisResult {
 
     private int score;
-    private int totalInstructions;
+    private String riskLevel;
+    private int instructionCount;
     private List<Recommendation> recommendations;
 
     public AnalysisResult() {
     }
 
     public AnalysisResult(int score,
-                          int totalInstructions,
+                          String riskLevel,
+                          int instructionCount,
                           List<Recommendation> recommendations) {
         this.score = score;
-        this.totalInstructions = totalInstructions;
+        this.riskLevel = riskLevel;
+        this.instructionCount = instructionCount;
         this.recommendations = recommendations;
     }
 
@@ -27,12 +30,20 @@ public class AnalysisResult {
         this.score = score;
     }
 
-    public int getTotalInstructions() {
-        return totalInstructions;
+    public String getRiskLevel() {
+        return riskLevel;
     }
 
-    public void setTotalInstructions(int totalInstructions) {
-        this.totalInstructions = totalInstructions;
+    public void setRiskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
+    }
+
+    public int getInstructionCount() {
+        return instructionCount;
+    }
+
+    public void setInstructionCount(int instructionCount) {
+        this.instructionCount = instructionCount;
     }
 
     public List<Recommendation> getRecommendations() {

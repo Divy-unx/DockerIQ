@@ -22,10 +22,11 @@ public class BaseImageRule implements Rule {
                 if (image.startsWith("ubuntu")) {
 
                     return new Recommendation(
-                            "Large Base Image",
-                            "MEDIUM",
-                            "Ubuntu images are larger than necessary for Java applications.",
-                            "Use eclipse-temurin:21-jre instead."
+                        "Large Base Image",
+                        "MEDIUM",
+                        "Ubuntu images are larger than necessary for Java applications.",
+                        "Use eclipse-temurin:21-jre instead.",
+                        10
                     );
                 }
             }

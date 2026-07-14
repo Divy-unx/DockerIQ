@@ -10,19 +10,31 @@ public class Recommendation {
 
     private String recommendation;
 
+    private int penalty;
+
     public Recommendation() {
     }
 
-    public Recommendation(String title,
-                          String severity,
-                          String description,
-                          String recommendation) {
+    public Recommendation(
+        String title,
+        String severity,
+        String description,
+        String recommendation,
+        int penalty) {
 
         this.title = title;
         this.severity = severity;
         this.description = description;
         this.recommendation = recommendation;
     }
+
+    public int getPenalty() {
+    return penalty;
+    }
+
+    public void setPenalty(int penalty) {
+    this.penalty = penalty;
+    }   
 
     public String getTitle() {
         return title;
