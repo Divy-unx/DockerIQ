@@ -7,6 +7,6 @@ import com.divyanshu.dockeriq.model.Recommendation;
 
 public interface Rule {
 
-    Recommendation check(List<DockerInstruction> instructions);
+    List<Recommendation> check(List<DockerInstruction> instructions);
 
 }

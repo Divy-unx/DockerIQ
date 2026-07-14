@@ -1,5 +1,6 @@
 package com.divyanshu.dockeriq.rules;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
@@ -11,7 +12,9 @@ import com.divyanshu.dockeriq.model.Recommendation;
 public class BaseImageRule implements Rule {
 
     @Override
-    public Recommendation check(List<DockerInstruction> instructions) {
+    public List<Recommendation> check(List<DockerInstruction> instructions) {
+
+        List<Recommendation> recommendations = new ArrayList<>();
 
         for (DockerInstruction instruction : instructions) {
 
@@ -21,17 +24,19 @@ public class BaseImageRule implements Rule {
 
                 if (image.startsWith("ubuntu")) {
 
-                    return new Recommendation(
-                        "Large Base Image",
-                        "MEDIUM",
-                        "Ubuntu images are larger than necessary for Java applications.",
-                        "Use eclipse-temurin:21-jre instead.",
-                        10
+                    recommendations.add(
+                            new Recommendation(
+                                    "Large Base Image",
+                                    "MEDIUM",
+                                    "Ubuntu images are larger than necessary for Java applications.",
+                                    "Use eclipse-temurin:21-jre instead.",
+                                    10
+                            )
                     );
                 }
             }
         }
 
-        return null;
+        return recommendations;
     }
 }

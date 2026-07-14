@@ -34,14 +34,13 @@ public class DockerAnalysisService {
 
         List<Recommendation> recommendations = new ArrayList<>();
 
-        for (Rule rule : rules) {
+    for (Rule rule : rules) {
 
-            Recommendation recommendation = rule.check(instructions);
+        List<Recommendation> ruleRecommendations = rule.check(instructions);
 
-            if (recommendation != null) {
-                recommendations.add(recommendation);
-            }
-        }
+        recommendations.addAll(ruleRecommendations);
+
+    }
 
         int score = scoreCalculator.calculate(recommendations);
 
