@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import com.divyanshu.dockeriq.model.DockerInstruction;
 import com.divyanshu.dockeriq.model.Recommendation;
+import com.divyanshu.dockeriq.model.Severity;
 
 @Component
 public class BaseImageRule implements Rule {
@@ -26,12 +27,11 @@ public class BaseImageRule implements Rule {
 
                     recommendations.add(
                             new Recommendation(
-                                    "Large Base Image",
-                                    "MEDIUM",
-                                    "Ubuntu images are larger than necessary for Java applications.",
-                                    "Use eclipse-temurin:21-jre instead.",
-                                    10
-                            )
+                            "Large Base Image",
+                            Severity.MEDIUM,
+                            "Ubuntu images are larger than necessary for Java applications.",
+                            "Use eclipse-temurin:21-jre instead."
+)
                     );
                 }
             }

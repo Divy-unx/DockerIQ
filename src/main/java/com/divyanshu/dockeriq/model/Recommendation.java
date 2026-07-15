@@ -4,37 +4,35 @@ public class Recommendation {
 
     private String title;
 
-    private String severity;
+    private Severity severity;
 
     private String description;
 
     private String recommendation;
 
-    private int penalty;
 
     public Recommendation() {
     }
 
     public Recommendation(
         String title,
-        String severity,
+        Severity severity,
         String description,
-        String recommendation,
-        int penalty) {
+        String recommendation) {
 
-        this.title = title;
-        this.severity = severity;
-        this.description = description;
-        this.recommendation = recommendation;
-    }
+    this.title = title;
+    this.severity = severity;
+    this.description = description;
+    this.recommendation = recommendation;
+}
 
-    public int getPenalty() {
-    return penalty;
-    }
+    public Severity getSeverity() {
+    return severity;
+}
 
-    public void setPenalty(int penalty) {
-    this.penalty = penalty;
-    }   
+    public void setSeverity(Severity severity) {
+    this.severity = severity;
+} 
 
     public String getTitle() {
         return title;
@@ -42,14 +40,6 @@ public class Recommendation {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getSeverity() {
-        return severity;
-    }
-
-    public void setSeverity(String severity) {
-        this.severity = severity;
     }
 
     public String getDescription() {
